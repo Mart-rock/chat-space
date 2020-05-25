@@ -1,1 +1,32 @@
-メインバー
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
+          Mart
+    .main-header__edit-link
+      = link_to "Edit"
+                 
+  .messages
+    .message
+      .message__uper-info
+        %p{class: "message__uper-info__talker"}Mart
+        %p{class: "message__uper-info__date"}2020/05/25(Mon) 16:23:33
+      %p{class: "message__uper-info__text"}こんちわー
+        
+  .form
+    %fom.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image", for: "message_image"}
+          = icon('fas', 'image age')
+        %input{type: "file", class: "input-box__image__file", name: "message_image[image]", id: "message_image"}  
+      %input{type: "submit", class: "submit-btn", value: "Send"}
+    
+    
+                  
+        
+  

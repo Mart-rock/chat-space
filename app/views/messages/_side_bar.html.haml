@@ -1,15 +1,16 @@
 .chat-side
   .side-header
     .side-header__box
+      = current_user.name
       %p.side-header__box__user-name
-        Mart 
+         
         %ul.side-header__box__menu
           %li.side-header__box__new-group
             = link_to "#" do
               = icon('fas', 'edit unko')
           %li.side-header__box__edit-user
-            = link_to "#" do
-              = icon('fas', 'cog sikko')
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog sikko', class: 'icon')
             
   .groups
     %p.group-name

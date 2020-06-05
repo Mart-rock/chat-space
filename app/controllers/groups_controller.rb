@@ -20,14 +20,15 @@ class GroupsController < ApplicationController
  def edit
   @group = Group.find(params[:id])
  end
-
- def update
+ 
+def update
   @group = Group.find(params[:id])
   if @group.update(group_params)
     redirect_to root_path, notice: 'グループを更新しました'
   else
-    render :edit
+    redirect_to root_path, notice:'グループを編集しました'
   end
+  
  end
  
   private
@@ -36,5 +37,6 @@ class GroupsController < ApplicationController
   end
 
 end
+ 
 
   

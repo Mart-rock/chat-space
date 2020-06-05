@@ -2,31 +2,32 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        test
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :
         %li.main-header__left-box__member-list__member
-          Mart
+          = @user.name()
     .main-header__edit-link
-      = link_to "Edit"
+      = link_to edit_group_path(current_user) do
+        Edit
                  
   .messages
+    = render @messages
     .message
       .message__uper-info
         %p{class: "message__uper-info__talker"}Mart
         %p{class: "message__uper-info__date"}2020/05/25(Mon) 16:23:33
       %p{class: "message__uper-info__text"}こんちわー
         
-  .form
-    %fom.new-message
+  .form  
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
         %label{class: "input-box__image", for: "message_image"}
           = icon('fas', 'image age')
         %input{type: "file", class: "input-box__image__file", name: "message_image[image]", id: "message_image"}  
-      %input{type: "submit", class: "submit-btn", value: "Send"}
-    
-    
-                  
-        
+        %input{type: "submit", class: "submit-btn", value: "Send"}
   
+        
+      
+

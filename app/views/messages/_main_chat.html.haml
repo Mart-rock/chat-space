@@ -15,21 +15,12 @@
                  
   .messages
     = render @messages
-    .message
-      .message__uper-info
-        %p{class: "message__uper-info__talker"}Mart
-        %p{class: "message__uper-info__date"}2020/05/25(Mon) 16:23:33
-      %p{class: "message__uper-info__text"}こんちわー
-        
-  .form  
+          
+  .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .input-box
-        %label{class: "input-box__image", for: "message_image"}
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: "input-box__image", for: "message_image" do
           = icon('fas', 'image age')
-        %input{type: "file", class: "input-box__image__file", name: "message_image[image]", id: "message_image"}  
-        %input{type: "submit", class: "submit-btn", value: "Send"}
-  
-        
-      
-
+          = f.file_field :image, class: "input-box__image__file" 
+      = f.submit 'Send', class: 'form__submit'

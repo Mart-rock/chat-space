@@ -10,13 +10,14 @@ $(function() {
              <div class="message__uper-info__date">
                ${message.created_at}
              </div>
+           </div>
               <div class="lower-message">
                   <div class="message__uper-info__text">
                   ${message.content}
                   </div>
               </div>
               <img src=${message.image} >
-            </div>
+            
           </div>`
           return html;
      } else {

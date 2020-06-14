@@ -68,6 +68,7 @@ $(function() {
       
     })
     .fail(function(){
+      $('.form__submit').prop('disabled', false);
       alert("メッセージ送信に失敗しました");
     });
     

@@ -18,3 +18,5 @@
 pubric/uploads/*
 
 public/uploads/*
+
+config/secrets.yml

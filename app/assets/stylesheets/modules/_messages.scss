@@ -13,7 +13,7 @@
     align-items: center;
     padding: 0 20px 0 20px;
       &__box {
-      width: 80%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       font-weight: bold;
@@ -26,20 +26,21 @@
 
 .side-header__box__menu {
   display: flex;
-  float: left;
-  position: absolute;
-  left: 260px;
-  top: 27px;
-    &__edit-user {
-      margin:0 0 0 5px;
-      }
-      .sikko {
-       color: #ffffff;
-     }
-      .unko {
-       color: #ffffff;
- }
-}   
+  position: relative;
+  left: 5px;
+  top: 3px;
+  }
+  .sikko {
+    color: #ffffff;
+  }
+  .unko {
+    color: #ffffff;
+  }
+
+
+.side-header__box__new-group {
+  margin:0 5px 0 0;
+}
 
 .groups {
  height: calc(100vh - 100px);

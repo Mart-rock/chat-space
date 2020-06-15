@@ -13,7 +13,7 @@
     align-items: center;
     padding: 0 20px 0 20px;
       &__box {
-      width: 100%;
+      width: 80%;
       display: flex;
       justify-content: space-between;
       font-weight: bold;
@@ -27,8 +27,9 @@
 .side-header__box__menu {
   display: flex;
   float: left;
-  position: relative;
-  left: 70px;
+  position: absolute;
+  left: 260px;
+  top: 27px;
     &__edit-user {
       margin:0 0 0 5px;
       }
